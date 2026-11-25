@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="26" fill="#FFFFFF"/>
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#00C8F5" stroke-width="2" opacity="0.55"/>
+  <circle cx="60" cy="60" r="44" fill="none" stroke="#075BCE" stroke-width="2" opacity="0.35" stroke-dasharray="10 7"/>
+  <circle cx="60" cy="60" r="35" fill="#050B16"/>
+  <text x="60" y="58" text-anchor="middle" dominant-baseline="central" font-family="'Space Grotesk','Inter',sans-serif" font-size="34" font-weight="700" fill="#00C8F5" letter-spacing="1">RC</text>
+  <text x="60" y="80" text-anchor="middle" font-family="'Inter',sans-serif" font-size="6.5" font-weight="600" fill="#EAF5FF" letter-spacing="2.2">COMMUNITY</text>
+</svg>

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  @apply bg-white text-slate-700 font-body antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full rounded-lg border border-royal-600/25 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none transition focus:border-cyan-brand/60 focus:bg-ice-50 focus:ring-2 focus:ring-cyan-brand/20;
+  }
+
+  .input-error {
+    @apply border-red-400/70 focus:border-red-400/70 focus:ring-red-400/20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-royal-600 to-cyan-brand px-7 py-3.5 text-sm font-semibold text-slate-900 shadow-glow-sm transition-all duration-300 hover:shadow-glow hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-brand focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-cyan-brand/40 bg-cyan-brand/5 px-7 py-3.5 text-sm font-semibold text-royal-700 transition-all duration-300 hover:border-cyan-brand hover:bg-cyan-brand/15 hover:shadow-glow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-brand focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-royal-600/30 bg-royal-600/5 px-7 py-3.5 text-sm font-semibold text-royal-700 transition-all duration-300 hover:border-cyan-brand hover:bg-cyan-brand/10 hover:text-royal-700 hover:shadow-glow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal-600 focus-visible:ring-offset-2 focus-visible:ring-offset-ice-100;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 26s linear infinite;
+}
+
+.animate-spin-slower {
+  animation: spin-slow 44s linear infinite reverse;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3.2s ease-in-out infinite;
+}
+
+.animate-float-y {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+.animate-dash-flow {
+  stroke-dasharray: 6 10;
+  animation: dash-flow 2.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-spin-slower,
+  .animate-pulse-ring,
+  .animate-float-y,
+  .animate-dash-flow {
+    animation: none;
+  }
+}
